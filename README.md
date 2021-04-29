@@ -10,10 +10,10 @@ Options:<br />
   -fd [ --file-digest ]           generate digests of a file<br />
   -d  [ --digest ]                 generate digests of all files in the directory<br />
   -o  [ --output ]                stores digest to the file<br />
-  -c  [ --compare ]              compare two digest files<br />
+  -c  [ --compare ]             compare two digest files<br />
   -t  [ --threshold ]             show results >= threshold (only works with compare option)<br />
-  -v  [ --version ]               print the version information<br />
-  -h  [ --help ]                  print help instructions<br />
+  -v  [ --version ]                print the version information<br />
+  -h  [ --help ]                    print help instructions<br />
   
   
   Instructions:<br />
