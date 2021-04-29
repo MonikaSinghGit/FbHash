@@ -1,0 +1,18 @@
+  """
+
+    from atomSel import AtomSel
+    if not sel: sel = AtomSel("known")
+
+    from atomAction import SetProperty
+    import random
+    from vec3 import Vec3
+    for atom in AtomSel("all"):
+        atom.setPos( Vec3(float(atom.index())/10,
+                          random.uniform(-0.5,0.5),
+                          random.uniform(-0.5,0.5)) )
+        pass
+
+    fixupCovalentGeom(useVDW=1,maxIters=100,sel=sel)
+
+
+    

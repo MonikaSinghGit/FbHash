@@ -1,0 +1,10 @@
+ ($krama=1.)
+    rama
+    nres=10000
+    end
+    """)
+    if type=='protein':
+        command("""
+        rama
+        @QUARTS:2D_quarts_new.tbl
+   

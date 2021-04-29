@@ -1,0 +1,320 @@
+
+--------------------------------------------------------------------------------
+
+Fire Management Zones (Polygon)
+
+--------------------------------------------------------------------------------
+
+Identification_Information
+Data_Quality_Information
+Spatial_Data_Organization_Information
+Spatial_Reference_Information
+Entity_and_Attribute_Information
+Distribution_Information
+Metadata_Reference_Information
+
+
+--------------------------------------------------------------------------------
+
+Identification Information
+Section Index
+
+
+Citation: 
+
+Citation Information: 
+
+Originator: OR/WA BLM
+Publication Date: 199207nformation: 
+
+Contact Person Primary: 
+
+Contact Person: Lisa Blackburn
+Contact Organization: Bureau of Land Management, OR/WA State Office
+
+Contact Position: State Records Administrator
+Contact Address: 
+
+Address Type: mailing address
+Address: P. O. Box 2965
+City: Portland
+State or Province: OR
+Postal Code: 97208
+Country: USA
+
+Contact Voice Telephone: (503)952-6276
+Contact Electronic Mail Address: lblackbu@or.blm.gov
+
+Native Data Set Environment: Arc/Info; AIX/UNIX
+
+
+--------------------------------------------------------------------------------
+
+Data Quality Information
+Section Index
+
+
+Attribute Accuracy: 
+
+Attribute Accuracy Report: The attributes were Q.C.'ed against the original mylar manuscript for accuracy.
+
+Logical Consistency Report: 
+The polygons were Q.C.'ed against the original mylar maps for consistency. There are no node or label errors. This theme was built with polygon topology.
+
+Completeness Report: This theme covers Western Oregon not including the Willamette Valley.
+Positional Accuracy: 
+
+Horizontal Positional Accuracy: 
+
+Horizontal Positional Accuracy Report: Unknown
+
+Lineage: 
+
+Source Information: 
+
+Source Citation: 
+
+Citation Information: 
+
+Originator: OR/WA BLM
+Publication Date: Unknown
+Title: Forest Management Zone Mylar Maps
+
+Source Scale Denominator: 100000
+Type of Source Media: Mylar Maps
+Source Time Period of Content: 
+
+Time Period Information: 
+
+Range of Dates/Times: 
+
+Beginning Date: Unknown
+Beginning Time: Unknown
+Ending Date: Unknown
+Ending Time: Unknown
+
+Source Currentness Reference: publication date
+
+Source Citation Abbreviation: BLM FMZ
+Source Contribution: Polygons and Attributes
+
+Process Step: 
+
+Process Description: 
+The mylar maps were digitized in ADS and carried into MOSS. These maps then were merged to create district-wide maps.
+
+Process Date: 1991
+
+Process Step: 
+
+Process Description: 
+The district-wide maps were converted to 100K Quads and then BLM contractors converted the data into Arc. The theme was projected from UTM 10 to Lambert 120.5 and polygon topology was built. The coverages were then
+inserted into the Q100 Library.
+
+Process Date: 1994
+
+Process Step: 
+
+Process Description: The Q100 library was converted from Arc/Info 6.1.2 to Arc/Info 7.0.2.
+Process Date: 19960325
+
+Cloud Cover: Unknown
+
+
+--------------------------------------------------------------------------------
+
+Spatial Data Organization Information
+Section Index
+
+
+Indirect Spatial Reference: None
+Direct Spatial Reference Method: Vector
+
+
+--------------------------------------------------------------------------------
+
+Spatial Reference Information
+Section Index
+
+
+Horizontal Coordinate System Definition: 
+
+Planar: 
+
+Map Projection: 
+
+Map Projection Name: Lambert Conformal Conic
+Lambert Conformal Conic: 
+
+Standard Parallel: 33
+Standard Parallel: 45
+Longitude of Central Meridian: -120.5
+Latitude of Projection Origin: 41.75
+False Easting: 0
+False Northing: 0
+
+Planar Coordinate Information: 
+
+Planar Coordinate Encoding Method: Coordinate Pair
+Coordinate Representation: 
+
+Abscissa Resolution: 0.001
+Ordinate Resolution: 0.001
+
+Geodetic Model: 
+
+Horizontal Datum Name: North American datum of 1927
+Ellipsoid Name: Clarke 1866
+Semi-major Axis: 6378206.4
+Denominator of Flattening Ratio: 294.98
+
+
+--------------------------------------------------------------------------------
+
+Entity and Attribute Information
+Section Index
+
+
+Detailed Description: 
+
+Entity Type: 
+
+Entity Type Label: Fire Management Zone Polygons
+Entity Type Definition: This theme shows the fire management zone boundaries.
+Entity Type Definition Source: OR/WA BLM
+
+Attribute: 
+
+Attribute Label: Fire Management Subzone
+Attribute Definition: The subzone number
+Attribute Definition Source: OR/WA BLM
+Attribute Domain Values: 
+
+Unrepresentable Domain: An unique identifing code for the polygon (e. g. N_2_1)
+
+Attribute: 
+
+Attribute Label: Fire Management Zones (SUBJ_FMZ)
+Attribute Definition: The identifing number of the polygon.
+Attribute Definition Source: OR/WA BLM
+Attribute Domain Values: 
+
+Unrepresentable Domain: 
+N = North, S = South, followed by an _# identifing zone number (e.g. N_3). Also known as Majorzone.
+
+
+--------------------------------------------------------------------------------
+
+Distribution Information
+Section Index
+
+
+Distributor: 
+
+Contact Information: 
+
+Contact Person Primary: 
+
+Contact Person: Lisa Blackburn
+Contact Organization: Bureau of Land Management, OR/WA State Office
+
+Contact Position: State Records Administrator
+Contact Address: 
+
+Address Type: mailing address
+Address: P. O. Box 2965
+City: Portland
+State or Province: OR
+Postal Code: 97208
+Country: USA
+
+Contact Voice Telephone: (503)952-6276
+Contact Electronic Mail Address: lblackbu@or.blm.gov
+
+Distribution Liability: No warranty is made by the Bureau of Land Management as to the accuracy, reliability, or completeness of these data for individual use or aggregate use with other data.
+Standard Order Process: 
+
+Digital Form: 
+
+Digital Transfer Information: 
+
+Format Name: ARCE
+Format Specification: Arc/Info Export File
+ASCII File Structure: 
+
+Case Sensitive: false
+
+File Decompression Technique: No compression applied
+
+Digital Transfer Option: 
+
+Offline Option: 
+
+Offline Media: 8 mm cartridge tape
+Recording Capacity: 
+
+Recording Density: 5.0
+Recording Density Units: Gigabytes
+
+Recording Format: TAR
+Compatibility Information: Sun UNIX
+
+Digital Transfer Option: 
+
+Online Option: 
+
+Access Instructions: Most data is available for download from the Oregon/Washington Bureau of Land Management geospatial web site (see Network Address above). Contact the distributor for additional assistance.
+
+Fees: 
+$8 administrative fee; $18.60 per hour research time (human time spent to locate the files and make the tape); $0.13 per page copying costs (8.5x11 up to 8.5x14); $7.50 per paper plot; $16.00 per mylar plot; cost of media (diskettes, tapes, etc); cost of postage (based on actual postage, including tubes, padded envelopes, overnight/express mail, etc). 
+Ordering Instructions: Contact Distributor
+
+Custom Order Process: Contact Distributor
+Available Time Period: 
+
+Time Period Information: 
+
+Single Date/Time: 
+
+Calendar Date: Unknown
+Time of Day: Unknown
+
+
+--------------------------------------------------------------------------------
+
+Metadata Reference Information
+Section Index
+
+
+Metadata Date: 2/20/1996
+Metadata Review Date: 
+Metadata Future Review Date: 2/20/1997
+Metadata Contact: 
+
+Contact Information: 
+
+Contact Person Primary: 
+
+Contact Person: Stanley Frazier
+Contact Organization: Bureau of Land Management, Oregon State Office
+
+Contact Position: State Data Administrator
+Contact Address: 
+
+Address Type: mailing address
+Address: P.O. Box 2965
+City: Portland
+State or Province: OR
+Postal Code: 97208
+Country: USA
+
+Contact Voice Telephone: (503)952-6009
+Contact Facsimile Telephone: (503)952-6419
+Contact Electronic Mail Address: Stan_Frazier@or.blm.gov
+
+Metadata Standard Name: FGDC Content Standards for Digital Geospatial Metadata
+Metadata Standard Version: FGDC-STD-001-1998
+
+
+--------------------------------------------------------------------------------
+SMMS Metadata report generated 7/12/2001 

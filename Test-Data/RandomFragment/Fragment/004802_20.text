@@ -1,0 +1,14 @@
+nough (within a range
+    of -0.5 to 0.5) to allow bonded atoms to form their bonds) and the X
+    coordinate is the atom number divided by 10. This will result in
+    an extended configuration along the X axis.
+    """
+
+    from atomSel import AtomSel
+    if not sel: sel = AtomSel("known")
+
+    from atomAction import SetProperty
+    import random
+    from vec3 import Vec3
+    for atom in AtomSel("all"):
+        atom.set

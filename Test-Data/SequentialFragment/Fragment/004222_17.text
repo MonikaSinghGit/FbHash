@@ -1,0 +1,23 @@
+   ALABAMA     B    B     NEW YORK    B    A     
+VERMONT     B    A     NEW HAMP    B    A     MAINE       N    A     
+MASS        B    A     CONN        B    A     RHODE IS    B    A     
+PENN        B    A     NEW JERSEY  B    A     W VIRGINIA  B    N     
+MARYLAND    B    A     DELAWARE    B    A     VIRGINIA    B    N     
+N CAROLINA  B    N     S CAROLINA  B    B     GEORGIA     B    B     
+FL PNHDL    B    N     FL PENIN    B    N     AK N SLOPE  N    B     
+AK ALEUTIAN B    N     AK WESTERN  B    B     AK INT BSN  N    B     
+AK S INT    N    N     AK SO COAST A    A     AK PNHDL    A    A     
+ 
+                           LEGEND
+TEMPS WITH RESPECT TO NORMAL     PCPN WITH RESPECT TO MEDIAN
+A - ABOVE   N  - NEAR NORMAL     A - ABOVE   N - NEAR MEDIAN
+B - BELOW                        B - BELOW
+ 
+THE FORECAST CLASSES REPRESENT AVERAGES FOR EACH STATE. NORMAL
+VALUES - WHICH MAY VARY WIDELY ACROSS SOME STATES - ARE
+AVAILABLE FROM YOUR LOCAL WEATHER SERVICE FORECAST OFFICE.
+ 
+FOR ADDITIONAL INFORMATION SEE MESSAGE FXUS06 KWBC - ON AWIPS AS
+PMDMRD.
+ 
+$$

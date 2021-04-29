@@ -1,0 +1,320 @@
+t sidechain restraints (default: TRUE)
+    """
+    command("set echo off mess off end")
+    command("""
+    restraints dihed 
+    reset
+    scale %f
+    nass = 10000
+    end""" % scale)
+    if type(filenames)==type("string"): filenames = [filenames]
+    for file in filenames:
+        command("restraints dihed @%s end" % file)
+        pass
+    if useDefaults:
+        command("""
+!
+! phe_angles.tbl
+!
+! constrains the chi2 angles of phe, tyr, asp, and glu
+! in a protein to 0..180 degrees
+!
+! JJK 3/10/97
+!
+
+for $res in id (name ca and (resn phe or resn tyr)) loop ang
+
+   restraints dihedral 
+      assign 
+         (byresidue id $res and name ca)
+         (byresidue id $res and name cb)
+         (byresidue id $res and name cg)
+         (byresidue id $res and name cd1)
+         1.0 90.0 30.0 2
+   end
+
+end loop ang
+
+for $res in id (name ca and resn asp) loop ang
+
+   restraints dihedral 
+      assign 
+         (byresidue id $res and name ca)
+         (byresidue id $res and name cb)
+         (byresidue id $res and name cg)
+         (byresidue id $res and name od1)
+         10.0 0.0 90.0 2
+   end
+
+end loop ang
+
+for $res in id (name ca and resn glu) loop ang
+
+   restraints dihedral 
+      assign 
+         (byresidue id $res and name cb)
+         (byresidue id $res and name cg)
+         (byresidue id $res and name cd)
+         (byresidue id $res and name oe1)
+         10.0 0.0 90.0 2
+   end
+
+end loop ang
+""")
+        pass
+    command("set echo on mess on end")
+    return
+
+def initCollapse(sel    ="all",
+                 Rtarget=-1,
+                 scale  =1):
+    """initialize the XPLOR <l http://nmr.cit.nih.gov/xplor-nih/xplorMan/node373n.html
+    radius of gyration potential term>.
+
+    parameters are:
+       sel - string or atom selection specifying atoms in include in the
+             Rgyr calculation. If this is omitted, all atoms are included.
+       Rtarget - target radius. If this is omitted, the target Rgyr is
+                 calculated as
+                    Rgyr = 2.2*numResidues^0.38 -1 [angstrom]
+      scale - scale factor. If omitted, it defaults to 1. Note that the
+              per-assignment scale is always 100, so the energy is actually
+              scaled by 100*scale.
+    """
+
+    if type(sel)==type("string"): sel = AtomSel(sel)
+
+    from selectTools import numResidues
+    numResidues = numResidues(sel)
+    if Rtarget<0:
+        Rtarget = (2.2 * numResidues**0.38 -1)
+        pass
+    
+    command("""
+    collapse
+    assign (%s) 100.0 %f
+    scale %f
+    end""" % (sel.string(), Rtarget, scale))
+    return
+
+def initMinimize(ivm,
+                 potList=0,
+                 printInterval=10,
+                 numSteps=500,
+                 maxCalls=20000):
+    """initialize an IVM object (from the <m ivm> module)
+    for Powell minimization.
+
+    In addition to the function arguments, the following IVM parameters are
+    initialized:
+      constrainLengths
+      maxDeltaE
+      eTolerance
+      gTolerance
+      dEpred
+    """
+    ivm.resetReuse()
+    ivm.setConstrainLengths(0)
+    ivm.setMaxDeltaE( 10000 )
+    ivm.setStepType("powell")
+    ivm.setNumSteps( numSteps )
+    ivm.setMaxCalls( maxCalls )
+    ivm.setPrintInterval( printInterval )
+    ivm.setETolerance(1e-7)
+    ivm.setGTolerance(1e-8)
+    ivm.setDEpred(0.001)
+    if potList: ivm.setPotList( potList )
+    return
+
+def initDynamics(ivm,
+                 bathTemp=-1,
+                 finalTime=0.2,
+                 numSteps=0,
+                 stepsize=0.001,
+                 potList=0,
+                 printInterval=50,
+                 initVelocities=0
+                 ):
+    """
+    initialize an IVM object (from the <m ivm> module)
+    for PC6 (6th order predictor-corrector) dynamics.
+
+    In addition to the function arguments, the following IVM parameters are
+    initialized:
+      constraintLengths
+      maxDeltaE
+      responseTime
+      eTolerance
+      adjustStepsize
+      scaleVel
+      resetCMInterval
+
+    additionally, if initVelocities!=0, the initial velocities will be
+    randomized
+    """
+    from atomAction import randomizeVelocities
+    ivm.resetReuse()
+    if bathTemp>=0:
+        ivm.setBathTemp(bathTemp)
+        if initVelocities: randomizeVelocities( bathTemp )
+        pass
+    ivm.setConstrainLengths(0)
+    ivm.setMaxDeltaE( 10000 )
+    ivm.setStepType("pc6")
+    ivm.setResponseTime(5)
+    ivm.setStepsize( stepsize ) #initial stepsize value
+    ivm.setETolerance( ivm.bathTemp()/1000 )
+    ivm.setPrintInterval( printInterval )
+    ivm.setAdjustStepsize(1)
+    ivm.setScaleVel(1)
+    ivm.setResetCMInterval( 10 )
+    ivm.setFinalTime(finalTime)
+    ivm.setNumSteps(numSteps)
+    if potList: ivm.setPotList( potList )
+    return
+
+def torsionTopology(ivm,fixedOmega=0):
+    """configure the <m ivm>.IVM tolopogy for standard torsion angle setup:
+    group rigid sidechains and break proline, ribose rings in the
+    appropriate places. If fixedOmega is set, also fix protein omega backbone
+    angles. 
+    """
+    import selectTools
+    if fixedOmega: selectTools.IVM_groupRigidBackbone(ivm)
+    selectTools.IVM_groupRigidSidechain(ivm)
+    selectTools.IVM_breakProlines(ivm)
+    selectTools.IVM_breakRiboses(ivm)
+    ivm.autoTorsion()
+    return
+
+def fixupCovalentGeom(sel=0,
+                      useVDW=0,
+                      useDynamics=1,
+                      maxIters=40,
+                      ):
+    """given the atoms in selection sel
+    """
+    from atomSel import AtomSel
+    
+    import xplor
+    xplor.command("set mess=off print=off echo=off end")
+
+    if not sel: sel = AtomSel("known")
+
+    xplor.command("constraints interaction (%s) (%s) end" %
+                  (sel.string(),sel.string()))
+
+    xplor.command("flags exclude * include scripting end")
+    
+    def covalentViols():
+
+        ret = map(lambda (name,thresh):
+                  int(xplor.command("print threshold %f %s end"%(thresh,name),
+                                    "violations")[0]),
+                  (("bonds",0.01),
+                   ("angles",5.0),
+                   ("impropers",5.0)))
+        return ret
+    
+
+    potCombinations = [("bond",),
+                       ("bond","angl"),
+                       ("bond","impr"),
+                       ("bond","angl","impr")]
+
+    if useVDW:
+        initNBond(nbxmod=2,cutnb=6.5,tolerance=2.0,repel=0.8,rcon=0.01)
+        potCombinations.append(("bond","angl","impr","vdw"))
+        pass
+
+    import random
+    from xplorPot import XplorPot
+    potCombinations = map(lambda list:map(lambda name:XplorPot(name),list),
+                          potCombinations)
+
+    from atomAction import SetProperty
+    actions = ["min","min","min"]
+    if useDynamics:
+        sel.apply(SetProperty("mass",100.))
+        sel.apply(SetProperty("fric",10.))
+        actions.append("dyn")
+        pass
+
+
+
+    for iter in range(0,maxIters):
+
+        viols=covalentViols()
+        numViols=reduce(lambda x,y:x+y,viols)
+
+        if numViols==0: break
+
+
+	#
+	# randomly choose which minimization scheme to apply
+	#
+        pots = random.choice(potCombinations)
+
+        xplor.simulation.potList().removeAll()
+        for pot in pots:
+            xplor.simulation.potList().add( pot )
+            pass
+
+        action = random.choice(actions)
+
+        if action=="min":
+            xplor.command("mini powell nstep 500 nprint 600 drop 10 end")
+        else:
+	    xplor.command("""dynamics verlet 
+                               nstep 500 time 0.001 nprint 600 iprfrq 0
+                               iasvel maxwell firsttemp 1000
+                               tbath 1000
+                             end""")
+            pass
+        pass
+
+    if numViols>0:
+
+        mess = "Covalent geometry still violated after fixupCovalentGeom\n"
+        mess += ("(%d bond viols, %d angle viols, %d improper viols)\n" %
+                 tuple(viols))
+        
+        if not useVDW:
+            mess += "Try increasing maxIters or enabling the useVdw flag."
+        else:
+            "Try increasing maxIters."
+            pass
+        raise mess
+        pass
+
+    xplor.command("set mess=$prev_Messages print=OUTPUT echo=$prev_Echo end")
+
+    return
+
+def genExtendedStructure(sel=0):
+    """
+    This assigns X, Y, and Z coordinates to each atom, and then calls
+    <m protocol>.fixupCovalentGeom() to correct the covalent geometry.
+
+    The Y and Z coordinates are random (but small enough (within a range
+    of -0.5 to 0.5) to allow bonded atoms to form their bonds) and the X
+    coordinate is the atom number divided by 10. This will result in
+    an extended configuration along the X axis.
+    """
+
+    from atomSel import AtomSel
+    if not sel: sel = AtomSel("known")
+
+    from atomAction import SetProperty
+    import random
+    from vec3 import Vec3
+    for atom in AtomSel("all"):
+        atom.setPos( Vec3(float(atom.index())/10,
+                          random.uniform(-0.5,0.5),
+                          random.uniform(-0.5,0.5)) )
+        pass
+
+    fixupCovalentGeom(useVDW=1,maxIters=100,sel=sel)
+
+
+    

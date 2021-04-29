@@ -1,0 +1,118 @@
+fication: 01-0443
+          Publication_Information:
+            Publication_Place: Denver, Colorado
+            Publisher: U.S. Geological Survey
+          Online_Linkage: http://greenwood.cr.usgs.gov/pub/open-file-reports/ofr-01-0443/
+  Description:
+    Abstract: This cover contains the outlines of recent landslides formed prior to Hurricane Mitch in October - November 1998.  Jeffrey Coe and Robert Bucknam mapped the landslides.  Most landslides were mapped using 1:40,000-scale aerial photographs and a Kern PG-2 photogrammetric plotter at 4X and 8X magnifications.  The photographs were scaled and oriented to the topographic base map using prominent topographic landmarks and plotted on a transparent polyester overlay registered to the topographic base maps at scales of 1:50,000 or 1:25,000.  In areas where landslides were very sparse, the aerial photographs were scanned with a mirror stereoscope at 4X magnification, and landslide locations were transferred to base maps by inspection.  The mapped landslides were digitized manually or by an optical scanner, and the data were then digitally registered to a digital version of the base map in ArcInfo.
+    Purpose: The cover shows the distribution of recent landslides formed prior to Hurricane Mitch in one of twenty 1:50,000-scale maps within a large study area adjacent to the Motagua and Polochic Rivers.  When combined, the maps provide a detailed inventory of landslides over a large geographic area (~10,000 km2) of diverse geology, geomorphology, microclimates, and vegetation.
+  Time_Period_of_Content:
+    Time_Period_Information:
+      Range_of_Dates/Times:
+        Beginning_Date: October 1998
+        Ending_Date: November 1998
+    Currentness_Reference: ground condition
+  Status:
+    Progress: Complete
+    Maintenance_and_Update_Frequency: None planned
+  Spatial_Domain:
+    Bounding_Coordinates:
+      West_Bounding_Coordinate: -90.389212
+      East_Bounding_Coordinate: -90.329509
+      North_Bounding_Coordinate: 15.388944
+      South_Bounding_Coordinate: 15.334322
+  Keywords:
+    Theme:
+      Theme_Keyword: Landslides
+    Place:
+      Place_Keyword_Thesaurus: http://edcnts11.cr.usgs.gov/theo/.
+      Place_Keyword: Guatemala
+    Temporal:
+      Temporal_Keyword: October 1998 - November 1998
+  Access_Constraints: None
+  Use_Constraints: These maps are inventory maps, not hazard maps, and should not be enlarged to a scale larger than 1:50,000.
+  Point_of_Contact:
+    Contact_Information:
+      Contact_Person_Primary:
+        Contact_Person: Jeffrey A. Coe
+        Contact_Organization: U.S. Geological Survey
+      Contact_Position: Geologist
+      Contact_Address:
+        Address_Type: physical address
+        Address: USGS, MS 966, Denver Federal Center, Box 25046
+        City: Denver
+        State_or_Province: CO
+        Postal_Code: 80225-0046
+        Country: USA
+      Contact_Address:
+        Address_Type: physical address
+        Address: USGS, Rm. 326, 1711 Illinois Street
+        City: Golden
+        State_or_Province: CO
+        Postal_Code: 80401
+        Country: USA
+      Contact_Voice_Telephone: (303) 273-8606
+      Contact_Facsimile_Telephone: (303) 273-8600
+      Contact_Electronic_Mail_Address: jcoe@usgs.gov
+      Hours_of_Service: 0800 - 1630 Mountain Time M-F
+      Contact_Instructions: E-mail contact is preferred.
+  Security_Information:
+    Security_Classification: Unclassified
+  Native_Data_Set_Environment: Microsoft Windows 2000 Version 5.0 (Build 2195) Service Pack 2; ESRI ArcCatalog 8.1.1.649
+Data_Quality_Information:
+  Positional_Accuracy:
+    Horizontal_Positional_Accuracy:
+      Horizontal_Positional_Accuracy_Report: The linework was digitized manually or by an optical scanner.  Landslide locations mapped using the photogrammetric plotter are estimated accurate to within 50-100 m.  Locations of landslides mapped using a mirror stereoscope are estimated to be accurate to within approximately 200 m.
+  Lineage:
+    Source_Information:
+      Source_Scale_Denominator: 40000
+      Type_of_Source_Media: aerial photographs
+      Source_Time_Period_of_Content:
+        Source_Currentness_Reference: ground condition
+    Process_Step:
+      Process_Description: Most landslides were mapped using 1:40,000-scale aerial photographs and a Kern PG-2 photogrammetric plotter at 4X and 8X magnifications.  The photographs were scaled and oriented to the topographic base map using prominent topographic landmarks and plotted on a transparent polyester overlay registered to the topographic base maps at a scale of 1:50,000 or 1:25,000.  In areas where landslides were very sparse, the aerial photographs were scanned with a mirror stereoscope at 4X magnification, and landslide locations were transferred to base maps by inspection.  The mapped landslides were digitized manually or by an optical scanner, and the data were then digitally registered to a digital version of the base map in ArcInfo.
+      Process_Contact:
+        Contact_Information:
+          Contact_Person_Primary:
+            Contact_Person: Jonathan W. Godt
+            Contact_Organization: U.S. Geological Survey
+          Contact_Voice_Telephone: (303) 273-8626
+          Contact_Facsimile_Telephone: (303) 273-8600
+          Contact_Electronic_Mail_Address: jgodt@usgs.gov
+          Hours_of_Service: 0800 - 1630 Mountain Time M-F
+          Contact_Instructions: E-mail is preferred
+Spatial_Data_Organization_Information:
+  Direct_Spatial_Reference_Method: Vector
+  Point_and_Vector_Object_Information:
+    SDTS_Terms_Description:
+      SDTS_Point_and_Vector_Object_Type: Complete chain
+      Point_and_Vector_Object_Count: 4
+    SDTS_Terms_Description:
+      SDTS_Point_and_Vector_Object_Type: Label point
+      Point_and_Vector_Object_Count: 0
+    SDTS_Terms_Description:
+      SDTS_Point_and_Vector_Object_Type: GT-polygon composed of chains
+      Point_and_Vector_Object_Count: 4
+    SDTS_Terms_Description:
+      SDTS_Point_and_Vector_Object_Type: Point
+      Point_and_Vector_Object_Count: 4
+Spatial_Reference_Information:
+  Horizontal_Coordinate_System_Definition:
+    Planar:
+      Map_Projection:
+        Map_Projection_Name: Transverse Mercator
+        Transverse_Mercator:
+          Scale_Factor_at_Central_Meridian: 1.000000
+          Longitude_of_Central_Meridian: -90.375000
+          Latitude_of_Projection_Origin: 15.333333
+          False_Easting: 0.000000
+          False_Northing: 0.000000
+      Planar_Coordinate_Information:
+        Planar_Coordinate_Encoding_Method: coordinate pair
+        Coordinate_Representation:
+          Abscissa_Resolution: 0.000016
+          Ordinate_Resolution: 0.000016
+        Planar_Distance_Units: meters
+    Geodetic_Model:
+      Horizontal_Datum_Name: North American Datum of 1927
+      Ellipsoid_Name: Clarke 1866

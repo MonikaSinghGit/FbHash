@@ -1,0 +1,155 @@
+ation: 
+
+Citation Information: 
+
+Originator: OR/WA BLM
+Publication Date: 199207
+Title: Fire Management Zones (Polygon)
+
+Description: 
+
+Abstract: 
+This theme shows the fire management zones. A fire management zone is an area of like fire behavior in a geographical region. Fire management zones may be either contiguous or small unconnected areas embedded in another FMZ.
+(See BLM Fire Management Activity Plan, H-9211-1, 27 February 1991)
+
+Purpose: Resource Management Planning
+Supplemental Information: 
+ADS (Automated Digitizing System), BLM (Bureau of Land Management), MOSS (Map Overlay Statistical System)
+
+Time Period of Content: 
+
+Time Period Information: 
+
+Range of Dates/Times: 
+
+Beginning Date: Unknown
+Beginning Time: Unknown
+Ending Date: 7/1992
+Ending Time: Unknown
+
+Currentness Reference: publication date
+
+Status: 
+
+Progress: Complete
+Maintenance and Update Frequency: Unknown
+
+Spatial Domain: 
+
+Bounding Coordinates: 
+
+West Bounding Coordinate: -124.25
+East Bounding Coordinate: -121.75
+North Bounding Coordinate: 46.25
+South Bounding Coordinate: 42
+
+Keywords: 
+
+Theme: 
+
+Theme Keyword Thesaurus: None
+Theme Keyword: Fire
+Theme Keyword: Fire Management Zones
+Theme Keyword: Climate
+
+Place: 
+
+Place Keyword Thesaurus: None
+Place Keyword: Western Oregon
+Place Keyword: Oregon
+
+Access Constraints: Discretionary, contains no sensitive information - generally considered releasable.
+Use Constraints: None
+Point of Contact: 
+
+Contact Information: 
+
+Contact Person Primary: 
+
+Contact Person: Lisa Blackburn
+Contact Organization: Bureau of Land Management, OR/WA State Office
+
+Contact Position: State Records Administrator
+Contact Address: 
+
+Address Type: mailing address
+Address: P. O. Box 2965
+City: Portland
+State or Province: OR
+Postal Code: 97208
+Country: USA
+
+Contact Voice Telephone: (503)952-6276
+Contact Electronic Mail Address: lblackbu@or.blm.gov
+
+Native Data Set Environment: Arc/Info; AIX/UNIX
+
+
+--------------------------------------------------------------------------------
+
+Data Quality Information
+Section Index
+
+
+Attribute Accuracy: 
+
+Attribute Accuracy Report: The attributes were Q.C.'ed against the original mylar manuscript for accuracy.
+
+Logical Consistency Report: 
+The polygons were Q.C.'ed against the original mylar maps for consistency. There are no node or label errors. This theme was built with polygon topology.
+
+Completeness Report: This theme covers Western Oregon not including the Willamette Valley.
+Positional Accuracy: 
+
+Horizontal Positional Accuracy: 
+
+Horizontal Positional Accuracy Report: Unknown
+
+Lineage: 
+
+Source Information: 
+
+Source Citation: 
+
+Citation Information: 
+
+Originator: OR/WA BLM
+Publication Date: Unknown
+Title: Forest Management Zone Mylar Maps
+
+Source Scale Denominator: 100000
+Type of Source Media: Mylar Maps
+Source Time Period of Content: 
+
+Time Period Information: 
+
+Range of Dates/Times: 
+
+Beginning Date: Unknown
+Beginning Time: Unknown
+Ending Date: Unknown
+Ending Time: Unknown
+
+Source Currentness Reference: publication date
+
+Source Citation Abbreviation: BLM FMZ
+Source Contribution: Polygons and Attributes
+
+Process Step: 
+
+Process Description: 
+The mylar maps were digitized in ADS and carried into MOSS. These maps then were merged to create district-wide maps.
+
+Process Date: 1991
+
+Process Step: 
+
+Process Description: 
+The district-wide maps were converted to 100K Quads and then BLM contractors converted the data into Arc. The theme was projected from UTM 10 to Lambert 120.5 and polygon topology was built. The coverages were then
+inserted into the Q100 Library.
+
+Process Date: 1994
+
+Process Step: 
+
+Process Description: The Q100 library was converted from Arc/Info 6.1

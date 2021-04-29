@@ -1,0 +1,172 @@
+cit.nih.gov/xplor-nih/xplorMan/node116.html#SECTION00530000000000000000
+    here>
+    """
+    command("""
+    parameters
+    nbonds
+    atom
+    nbxmod %d
+    wmin  =   0.01  ! warning off
+    cutnb =   %f   ! nonbonded cutoff
+    tolerance %f
+    repel=    %f   ! scale factor for vdW radii = 1 ( L-J radii)
+    rexp   =  2     ! exponents in (r^irex - R0^irex)^rexp
+    irex   =  2
+    rcon=%f      ! actually set the vdW weight
+    end
+    end 
+    """ % (nbxmod,cutnb,tolerance,repel,rcon) )
+
+def initRamaDatabase(type='protein'):
+    """standard initialization of the <l http://nmr.cit.nih.gov/xplor-nih/xplorMan/node373k.html
+    rama torsion-angle database potential>.
+    """
+    command("""
+    set message off echo off end
+    eval ($krama=1.)
+    rama
+    nres=10000
+    end
+    """)
+    if type=='protein':
+        command("""
+        rama
+        @QUARTS:2D_quarts_new.tbl
+        @QUARTS:3D_quarts_new.tbl
+        @QUARTS:forces_torsion_prot_quarts_intra.tbl
+        end
+        @QUARTS:setup_quarts_torsions_intra_2D3D.tbl
+        set message on echo on end
+        """)
+    elif type=='nucleic':
+        command("""
+        evaluate ($knuc=1.0)
+        rama
+        @QUARTS:nucleic_deltor_quarts2d.tbl
+        @QUARTS:nucleic_deltor_quarts3d.tbl
+        @QUARTS:nucleic_deltor_quarts4d.tbl
+        @QUARTS:force_nucleic_quarts2d.tbl
+        @QUARTS:force_nucleic_quarts3d.tbl
+        @QUARTS:force_nucleic_quarts4d.tbl
+        end
+        @QUARTS:setup_nucleic_2d3d.tbl
+        @QUARTS:setup_nucleic_4d.tbl
+        set message on echo on end
+        """)
+    else:
+        raise "initRamaDatabase: unknown database type:", type
+    return
+
+def initDihedrals(filenames=[], scale=1, useDefaults=1):
+    """initialize the XPLOR <l http://nmr.cit.nih.gov/xplor-nih/xplorMan/node369.html#SECTION001970000000000000000
+    restraints dihe (CDIH) potential term>.
+
+    parameters are:
+       filenames   - either a single filename, or a sequence of filenames of
+                     dihedral restraint assignment tables.
+       scale       - scale factor (defaults to 1).
+       useDefaults - use the default sidechain restraints (default: TRUE)
+    """
+    command("set echo off mess off end")
+    command("""
+    restraints dihed 
+    reset
+    scale %f
+    nass = 10000
+    end""" % scale)
+    if type(filenames)==type("string"): filenames = [filenames]
+    for file in filenames:
+        command("restraints dihed @%s end" % file)
+        pass
+    if useDefaults:
+        command("""
+!
+! phe_angles.tbl
+!
+! constrains the chi2 angles of phe, tyr, asp, and glu
+! in a protein to 0..180 degrees
+!
+! JJK 3/10/97
+!
+
+for $res in id (name ca and (resn phe or resn tyr)) loop ang
+
+   restraints dihedral 
+      assign 
+         (byresidue id $res and name ca)
+         (byresidue id $res and name cb)
+         (byresidue id $res and name cg)
+         (byresidue id $res and name cd1)
+         1.0 90.0 30.0 2
+   end
+
+end loop ang
+
+for $res in id (name ca and resn asp) loop ang
+
+   restraints dihedral 
+      assign 
+         (byresidue id $res and name ca)
+         (byresidue id $res and name cb)
+         (byresidue id $res and name cg)
+         (byresidue id $res and name od1)
+         10.0 0.0 90.0 2
+   end
+
+end loop ang
+
+for $res in id (name ca and resn glu) loop ang
+
+   restraints dihedral 
+      assign 
+         (byresidue id $res and name cb)
+         (byresidue id $res and name cg)
+         (byresidue id $res and name cd)
+         (byresidue id $res and name oe1)
+         10.0 0.0 90.0 2
+   end
+
+end loop ang
+""")
+        pass
+    command("set echo on mess on end")
+    return
+
+def initCollapse(sel    ="all",
+                 Rtarget=-1,
+                 scale  =1):
+    """initialize the XPLOR <l http://nmr.cit.nih.gov/xplor-nih/xplorMan/node373n.html
+    radius of gyration potential term>.
+
+    parameters are:
+       sel - string or atom selection specifying atoms in include in the
+             Rgyr calculation. If this is omitted, all atoms are included.
+       Rtarget - target radius. If this is omitted, the target Rgyr is
+                 calculated as
+                    Rgyr = 2.2*numResidues^0.38 -1 [angstrom]
+      scale - scale factor. If omitted, it defaults to 1. Note that the
+              per-assignment scale is always 100, so the energy is actually
+              scaled by 100*scale.
+    """
+
+    if type(sel)==type("string"): sel = AtomSel(sel)
+
+    from selectTools import numResidues
+    numResidues = numResidues(sel)
+    if Rtarget<0:
+        Rtarget = (2.2 * numResidues**0.38 -1)
+        pass
+    
+    command("""
+    collapse
+    assign (%s) 100.0 %f
+    scale %f
+    end""" % (sel.string(), Rtarget, scale))
+    return
+
+def initMinimize(ivm,
+                 potList=0,
+                 printInterval=10,
+                 numSteps=500,
+                 maxCalls=20000):
+    """initialize an IVM

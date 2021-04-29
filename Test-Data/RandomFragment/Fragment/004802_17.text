@@ -1,0 +1,48 @@
+  if type(files)==type("string"):
+        if re.search("PSF\s*\n",files):
+            command("struct %s end" % files)
+            return
+        else:
+            files=[files]
+            pass
+        pass
+    for file in files:
+        try:
+            os.stat(file)
+            command("struct @%s end" %file)
+        except OSError:
+            from os import environ as env
+            tfile = env['TOPPAR'] + '/' + file
+            try:
+                os.stat(tfile)
+                command("struct @TOPPAR:%s end" %file)
+            except OSError:
+                raise "initStruct: could not find file " + file +\
+                      " in current dir, or in TOPPAR";
+            pass
+        pass
+    return
+    
+            
+        
+
+def initNBond(cutnb=4.5,
+              rcon=1.0,
+              nbxmod=3,
+              tolerance=0.5,
+              repel=0.9):
+    """standard initialization of the non-bonded repel potential. The XPLOR
+    nonbonded potential term is described <l http://nmr.cit.nih.gov/xplor-nih/xplorMan/node116.html#SECTION00530000000000000000
+    here>
+    """
+    command("""
+    parameters
+    nbonds
+    atom
+    nbxmod %d
+    wmin  =   0.01  ! warning off
+    cutnb =   %f   ! nonbonded cutoff
+    tolerance %f
+    repel=    %f   ! scale factor for vdW radii = 1 ( L-J radii)
+    rexp   =  2     ! exponents in (r^irex - R0^irex)^rexp
+    irex   =  2

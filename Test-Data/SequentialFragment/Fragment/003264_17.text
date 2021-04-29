@@ -1,0 +1,34 @@
+rson_Primary:
+        Contact_Person: Jonathan W. Godt
+        Contact_Organization: U.S. Geological Survey
+      Contact_Position: Geologist
+      Contact_Address:
+        Address_Type: mailing address
+        Address: USGS, MS 966
+        Address: Denver Federal Center
+        Address: Box 25046
+        City: Denver
+        State_or_Province: CO
+        Postal_Code: 80225-0046
+        Country: USA
+      Contact_Voice_Telephone: (303) 273-8626
+      Contact_Facsimile_Telephone: (303) 273-8600
+      Contact_Electronic_Mail_Address: jgodt@usgs.gov
+      Hours_of_Service: 0800 - 1630 Mountain Time M-F
+      Contact_Instructions: E-mail is preferred
+  Metadata_Standard_Name: FGDC Content Standards for Digital Geospatial Metadata
+  Metadata_Standard_Version: FGDC-STD-001-1998
+  Metadata_Time_Convention: local time
+  Metadata_Access_Constraints: None
+  Metadata_Use_Constraints: None
+  Metadata_Security_Information:
+    Metadata_Security_Classification: Unclassified
+  Metadata_Extensions:
+    Online_Linkage: http://www.esri.com/metadata/esriprof80.html
+    Profile_Name: ESRI Metadata Profile
+  Metadata_Extensions:
+    Online_Linkage: http://www.esri.com/metadata/esriprof80.html
+    Profile_Name: ESRI Metadata Profile
+  Metadata_Extensions:
+    Online_Linkage: http://www.esri.com/metadata/esriprof80.html
+    Profile_Name: ESRI Metadata Profile

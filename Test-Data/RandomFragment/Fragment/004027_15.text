@@ -1,0 +1,43 @@
+     COH1 Site Information Form
+     City of Houston Public Works, Inc. Cooperative CORS Station
+
+0.   Form
+
+0.1  Prepared by (full name)  : Darrell Babcock (RODS Surveying)
+     Date Prepared            : 14-OCT-2003
+     Report Type              : NEW
+     Prepared Using           :
+
+0.x  Prepared by (full name)  :
+     Date Prepared            : (dd-MMM-yyyy)
+     Report Type              : (NEW/UPDATE)
+     Prepared Using           :
+
+1.   Site Identification of the GPS Monument
+
+     Site Name                : COH1
+     Four Character ID        : coh1
+     Monument Inscription     :
+     IERS DOMES Number        : (XXXXXXXXX)
+     CDP Number               : (XXXX)
+     Date Installed           : 15-JUL-2003 UT
+     Geologic Characteristic  : CONGLOMERATE
+       Bedrock Type           : (IGNEOUS/METAMORPHIC/SEDIMENTARY)
+       Bedrock Condition      : (FRESH/JOINTED/WEATHERED)
+       Fracture Spacing       : (1-10 cm/10-50 cm/50-200 cm/over 200 cm)
+       Notes                  : (multiple lines)
+     Additional Information   : (multiple lines)
+
+2.   Site Location Information
+
+     te Map               : (Y)
+       Site Diagram           : (Y)
+       Horizon Mask           : (Y)
+       Monument Description   : (Y)
+       Site Pictures          : (Y)
+     Additional Information   : (multiple lines)
+
+     Antenna Graphics with Dimensions
+
+        if you do not have one you may wish to link here...
+     http://www.ngs.noaa.gov/ANTCAL/

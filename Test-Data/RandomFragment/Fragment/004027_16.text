@@ -1,0 +1,30 @@
+TE
+       Bedrock Type           : (IGNEOUS/METAMORPHIC/SEDIMENTARY)
+       Bedrock Condition      : (FRESH/JOINTED/WEATHERED)
+       Fracture Spacing       : (1-10 cm/10-50 cm/50-200 cm/over 200 cm)
+       Notes                  : (multiple lines)
+     Additional Information   : (multiple lines)
+
+2.   Site Location Information
+
+     City or Town             : Houston
+     State or Province        : Texas 
+     Country                  : USA
+     Tectonic Plate           : North American
+     Approximate Position
+       X coordinate (m)       : -535706.785(m)
+       Y coordinate (m)       : -5520501.569(m)
+       Z coordinate (m)       : 3138671.225(m)
+       Latitude (deg)         : 29.6703 N
+       Longitude (deg)        : 095.5426 W
+       Elevation (m)          : -4.910 (Ellip Ht)
+     Additional Information   : ARP ITRF00 POSITION (epoch 1997.0) computed
+by NGS
+using OPUS the On-line Processing User Service w/ 10 days of data from ----
+to ----.
+Positions were transformed using Horizontal Time Dependent Positioning
+(HTDP) to the
+appropriate epoch.
+
+3.   GPS Receiver Information
+

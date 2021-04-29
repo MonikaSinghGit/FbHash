@@ -1,0 +1,77 @@
+r
+Coordinate Representation: 
+
+Abscissa Resolution: 0.001
+Ordinate Resolution: 0.001
+
+Geodetic Model: 
+
+Horizontal Datum Name: North American datum of 1927
+Ellipsoid Name: Clarke 1866
+Semi-major Axis: 6378206.4
+Denominator of Flattening Ratio: 294.98
+
+
+--------------------------------------------------------------------------------
+
+Entity and Attribute Information
+Section Index
+
+
+Detailed Description: 
+
+Entity Type: 
+
+Entity Type Label: Fire Management Zone Polygons
+Entity Type Definition: This theme shows the fire management zone boundaries.
+Entity Type Definition Source: OR/WA BLM
+
+Attribute: 
+
+Attribute Label: Fire Management Subzone
+Attribute Definition: The subzone number
+Attribute Definition Source: OR/WA BLM
+Attribute Domain Values: 
+
+Unrepresentable Domain: An unique identifing code for the polygon (e. g. N_2_1)
+
+Attribute: 
+
+Attribute Label: Fire Management Zones (SUBJ_FMZ)
+Attribute Definition: The identifing number of the polygon.
+Attribute Definition Source: OR/WA BLM
+Attribute Domain Values: 
+
+Unrepresentable Domain: 
+N = North, S = South, followed by an _# identifing zone number (e.g. N_3). Also known as Majorzone.
+
+
+--------------------------------------------------------------------------------
+
+Distribution Information
+Section Index
+
+
+Distributor: 
+
+Contact Information: 
+
+Contact Person Primary: 
+
+Contact Person: Lisa Blackburn
+Contact Organization: Bureau of Land Management, OR/WA State Office
+
+Contact Position: State Records Administrator
+Contact Address: 
+
+Address Type: mailing address
+Address: P. O. Box 2965
+City: Portland
+State or Province: OR
+Postal Code: 97208
+Country: USA
+
+Contact Voice Telephone: (503)952-6276
+Contact Electronic Mail Address: lblackbu@or.blm.gov
+
+Distribution Liability: No warranty is made by the Bureau of Land Management as to the accuracy, reliability, or com

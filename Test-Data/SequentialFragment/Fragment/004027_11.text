@@ -1,0 +1,85 @@
+ion
+
+8.1  Humidity Sensor Model    :
+       Manufacturer           :
+       Data Frequency         :
+       Accuracy (% rel h)     : (% rel h)
+       Effective Dates        : (dd-MMM-yyyy - dd-MMM-yyyy)
+       Notes                  : (multiple lines)
+
+8.2  Pressure Sensor Model    :
+       Manufacturer           :
+       Data Frequency         :
+       Accuracy (mbar)        : (mbar)
+       Height Diff to GPS (m) : (m)
+       Effective Dates        : (dd-MMM-yyyy - dd-MMM-yyyy)
+       Notes                  : (multiple lines)
+
+8.3  Temperature Sensor Model :
+       Manufacturer           :
+       Data Frequency         :
+       Accuracy (deg C)       : (deg C)
+       Effective Dates        : (dd-MMM-yyyy - dd-MMM-yyyy)
+       Notes                  : (multiple lines)
+
+8.4  Water Vapor Radiometer   :
+       Manufacturer           :
+       Distance to GPS (m)    : (m)
+       Elev Diff to GPS (m)   : (m)
+       Effective Dates        : (dd-MMM-yyyy - dd-MMM-yyyy)
+       Notes                  : (multiple lines)
+
+8.5  Other Instrumentation    : (multiple lines)
+
+9.   On-Site, Point of Contact Agency Information
+
+     Agency                   : City of Houston Public Works
+     Mailing Address          : PO Box 1562 611 Walker Avenue
+                                Houston,TX. 77251-1562   
+     Primary Contact
+       Contact Name           : Robert Towery,RPLS
+       Telephone (primary)    : (713) 837-7165
+       Telephone (secondary)  :
+       Fax                    : (713) 837-0690
+       E-mail                 : robert.towery@cityofhouston.net
+     Secondary Contact
+       Contact Name           : Rodney Sanders
+       Telephone (primary)    : (713) 837-7162
+       Telephone (secondary)  :
+       Fax                    : (713) 837-0690
+       E-mail                 : rodney.sanders@cityofhouston.net
+     Additional Information   : (multiple lines)
+
+10.  Responsible Agency (if different from 9.)
+
+     Agency                   : (multiple lines)
+     Mailing Address          : (multiple lines)
+     Primary Contact
+       Contact Name           :
+       Telephone (primary)    :
+       Telephone (secondary)  :
+       Fax                    :
+       E-mail                 :
+     Secondary Contact
+       Contact Name           :
+       Telephone (primary)    :
+       Telephone (secondary)  :
+       Fax                    :
+       E-mail                 :
+     Additional Information   : (multiple lines)
+
+11.  More Information
+
+     URL for More Information : http://www.cityofhouston.gov/
+     Hardcopy on File
+       Site Map               : (Y)
+       Site Diagram           : (Y)
+       Horizon Mask           : (Y)
+       Monument Description   : (Y)
+       Site Pictures          : (Y)
+     Additional Information   : (multiple lines)
+
+     Antenna Graphics with Dimensions
+
+        if you do not have one you may wish to link here...
+     http://www.ngs.noaa.gov/ANTCAL/

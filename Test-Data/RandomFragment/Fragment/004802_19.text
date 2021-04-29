@@ -1,0 +1,23 @@
+()
+        numViols=reduce(lambda x,y:x+y,viols)
+
+        if numViols==0: break
+
+
+	#
+	# randomly choose which minimization scheme to apply
+	#
+        pots = random.choice(potCombinations)
+
+        xplor.simulation.potList().removeAll()
+        for pot in pots:
+            xplor.simulation.potList().add( pot )
+            pass
+
+        action = random.choice(actions)
+
+        if action=="min":
+            xplor.command("mini powell nstep 500 nprint 600 drop 10 end")
+        else:
+	    xplor.command("""dynamics verlet 
+                               nstep 50

@@ -1,0 +1,118 @@
+ 
+
+Attribute Accuracy Report: The attributes were Q.C.'ed against the original mylar manuscript for accuracy.
+
+Logical Consistency Report: 
+The polygons were Q.C.'ed against the original mylar maps for consistency. There are no node or label errors. This theme was built with polygon topology.
+
+Completeness Report: This theme covers Western Oregon not including the Willamette Valley.
+Positional Accuracy: 
+
+Horizontal Positional Accuracy: 
+
+Horizontal Positional Accuracy Report: Unknown
+
+Lineage: 
+
+Source Information: 
+
+Source Citation: 
+
+Citation Information: 
+
+Originator: OR/WA BLM
+Publication Date: Unknown
+Title: Forest Management Zone Mylar Maps
+
+Source Scale Denominator: 100000
+Type of Source Media: Mylar Maps
+Source Time Period of Content: 
+
+Time Period Information: 
+
+Range of Dates/Times: 
+
+Beginning Date: Unknown
+Beginning Time: Unknown
+Ending Date: Unknown
+Ending Time: Unknown
+
+Source Currentness Reference: publication date
+
+Source Citation Abbreviation: BLM FMZ
+Source Contribution: Polygons and Attributes
+
+Process Step: 
+
+Process Description: 
+The mylar maps were digitized in ADS and carried into MOSS. These maps then were merged to create district-wide maps.
+
+Process Date: 1991
+
+Process Step: 
+
+Process Description: 
+The district-wide maps were converted to 100K Quads and then BLM contractors converted the data into Arc. The theme was projected from UTM 10 to Lambert 120.5 and polygon topology was built. The coverages were then
+inserted into the Q100 Library.
+
+Process Date: 1994
+
+Process Step: 
+
+Process Description: The Q100 library was converted from Arc/Info 6.1.2 to Arc/Info 7.0.2.
+Process Date: 19960325
+
+Cloud Cover: Unknown
+
+
+--------------------------------------------------------------------------------
+
+Spatial Data Organization Information
+Section Index
+
+
+Indirect Spatial Reference: None
+Direct Spatial Reference Method: Vector
+
+
+--------------------------------------------------------------------------------
+
+Spatial Reference Information
+Section Index
+
+
+Horizontal Coordinate System Definition: 
+
+Planar: 
+
+Map Projection: 
+
+Map Projection Name: Lambert Conformal Conic
+Lambert Conformal Conic: 
+
+Standard Parallel: 33
+Standard Parallel: 45
+Longitude of Central Meridian: -120.5
+Latitude of Projection Origin: 41.75
+False Easting: 0
+False Northing: 0
+
+Planar Coordinate Information: 
+
+Planar Coordinate Encoding Method: Coordinate Pair
+Coordinate Representation: 
+
+Abscissa Resolution: 0.001
+Ordinate Resolution: 0.001
+
+Geodetic Model: 
+
+Horizontal Datum Name: North American datum of 1927
+Ellipsoid Name: Clarke 1866
+Semi-major Axis: 6378206.4
+Denominator of Flattening Ratio: 294.98
+
+
+--------------------------------------------------------------------------------
+
+Entity and Attribute In

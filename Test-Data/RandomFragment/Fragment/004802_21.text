@@ -1,0 +1,6 @@
+ded.
+       Rtarget - target radius. If this is omitted, the target Rgyr is
+                 calculated as
+                    Rgyr = 2.2*numResidues^0.38 -1 [angstrom]
+      scale - scale factor. If omitted, it defaults to 1. Note that the
+              per-assignment scale is always 

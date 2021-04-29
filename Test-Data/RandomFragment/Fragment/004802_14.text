@@ -1,0 +1,119 @@
+ment
+    is cleared. 
+    """
+    if erase: command("struct reset end")
+
+    if not files: return
+    
+    import re, os
+    if type(files)==type("string"):
+        if re.search("PSF\s*\n",files):
+            command("struct %s end" % files)
+            return
+        else:
+            files=[files]
+            pass
+        pass
+    for file in files:
+        try:
+            os.stat(file)
+            command("struct @%s end" %file)
+        except OSError:
+            from os import environ as env
+            tfile = env['TOPPAR'] + '/' + file
+            try:
+                os.stat(tfile)
+                command("struct @TOPPAR:%s end" %file)
+            except OSError:
+                raise "initStruct: could not find file " + file +\
+                      " in current dir, or in TOPPAR";
+            pass
+        pass
+    return
+    
+            
+        
+
+def initNBond(cutnb=4.5,
+              rcon=1.0,
+              nbxmod=3,
+              tolerance=0.5,
+              repel=0.9):
+    """standard initialization of the non-bonded repel potential. The XPLOR
+    nonbonded potential term is described <l http://nmr.cit.nih.gov/xplor-nih/xplorMan/node116.html#SECTION00530000000000000000
+    here>
+    """
+    command("""
+    parameters
+    nbonds
+    atom
+    nbxmod %d
+    wmin  =   0.01  ! warning off
+    cutnb =   %f   ! nonbonded cutoff
+    tolerance %f
+    repel=    %f   ! scale factor for vdW radii = 1 ( L-J radii)
+    rexp   =  2     ! exponents in (r^irex - R0^irex)^rexp
+    irex   =  2
+    rcon=%f      ! actually set the vdW weight
+    end
+    end 
+    """ % (nbxmod,cutnb,tolerance,repel,rcon) )
+
+def initRamaDatabase(type='protein'):
+    """standard initialization of the <l http://nmr.cit.nih.gov/xplor-nih/xplorMan/node373k.html
+    rama torsion-angle database potential>.
+    """
+    command("""
+    set message off echo off end
+    eval ($krama=1.)
+    rama
+    nres=10000
+    end
+    """)
+    if type=='protein':
+        command("""
+        rama
+        @QUARTS:2D_quarts_new.tbl
+        @QUARTS:3D_quarts_new.tbl
+        @QUARTS:forces_torsion_prot_quarts_intra.tbl
+        end
+        @QUARTS:setup_quarts_torsions_intra_2D3D.tbl
+        set message on echo on end
+        """)
+    elif type=='nucleic':
+        command("""
+        evaluate ($knuc=1.0)
+        rama
+        @QUARTS:nucleic_deltor_quarts2d.tbl
+        @QUARTS:nucleic_deltor_quarts3d.tbl
+        @QUARTS:nucleic_deltor_quarts4d.tbl
+        @QUARTS:force_nucleic_quarts2d.tbl
+        @QUARTS:force_nucleic_quarts3d.tbl
+        @QUARTS:force_nucleic_quarts4d.tbl
+        end
+        @QUARTS:setup_nucleic_2d3d.tbl
+        @QUARTS:setup_nucleic_4d.tbl
+        set message on echo on end
+        """)
+    else:
+        raise "initRamaDatabase: unknown database type:", type
+    return
+
+def initDihedrals(filenames=[], scale=1, useDefaults=1):
+    """initialize the XPLOR <l http://nmr.cit.nih.gov/xplor-nih/xplorMan/node369.html#SECTION001970000000000000000
+    restraints dihe (CDIH) potential term>.
+
+    parameters are:
+       filenames   - either a single filename, or a sequence of filenames of
+                     dihedral restraint assignment tables.
+       scale       - scale factor (defaults to 1).
+       useDefaults - use the default sidechain restraints (default: TRUE)
+    """
+    command("set echo off mess off end")
+    command("""
+    restraints dihed 
+    reset
+    scale %f
+    nass = 10000
+    end""" % scale)
+    if type(filenames)==type("strin

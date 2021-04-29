@@ -1,0 +1,33 @@
+e:
+      Attribute_Label: FID
+      Attribute_Definition: Internal feature number.
+      Attribute_Definition_Source: ESRI
+      Attribute_Domain_Values:
+        Unrepresentable_Domain: Sequential unique whole numbers that are automatically generated.
+    Attribute:
+      Attribute_Label: Shape
+      Attribute_Definition: Feature geometry.
+      Attribute_Definition_Source: ESRI
+      Attribute_Domain_Values:
+        Unrepresentable_Domain: Coordinates defining the features.
+    Attribute:
+      Attribute_Label: FNODE#
+      Attribute_Definition: Internal node number for the beginning of an arc (from-node).
+      Attribute_Definition_Source: ESRI
+      Attribute_Domain_Values:
+        Unrepresentable_Domain: Whole numbers that are automatically generated.
+    Attribute:
+      Attribute_Label: TNODE#
+      Attribute_Definition: Internal node number for the end of an arc (to-node).
+      Attribute_Definition_Source: ESRI
+      Attribute_Domain_Values:
+        Unrepresentable_Domain: Whole numbers that are automatically generated.
+    Attribute:
+      Attribute_Label: LPOLY#
+      Attribute_Definition: Internal node number for the left polygon.
+      Attribute_Definition_Source: ESRI
+      Attribute_Domain_Values:
+        Unrepresentable_Domain: Whole numbers that are automatically generated.
+    Attribute:
+      Attribute_Label: RPOLY#
+   

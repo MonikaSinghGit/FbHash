@@ -1,0 +1,173 @@
+Identification_Information:
+  Citation:
+    Citation_Information:
+      Originator: Robert C. Bucknam
+      Originator: Jeffrey A. Coe
+      Originator: Manuel Antonio Mota
+      Publication_Date: 2001
+      Title: ols21623
+      Geospatial_Data_Presentation_Form: vector digital data
+      Series_Information:
+      Publication_Information:
+      Online_Linkage: http://greenwood.cr.usgs.gov/pub/open-file-reports/ofr-01-0443/
+      Larger_Work_Citation:
+        Citation_Information:
+          Originator: Robert C. Bucknam
+          Originator: Jeffrey A. Coe
+          Originator: Manuel Antonio Mota
+          Originator: Jonathan W. Godt
+          Originator: Arthur C. Tarr
+          Originator: Lee-Ann Bradley
+          Originator: Sharon Rafferty
+          Originator: Dean Hancock
+          Originator: Richard L. Dart
+          Originator: Margo L. Johnson
+          Publication_Date: 2001
+          Title: Landslides Triggered by Hurricane Mitch in Guatemala - Inventory and Discussion
+          Series_Information:
+            Series_Name: U.S. Geologcial Survey Open-File Report
+            Issue_Identification: 01-0443
+          Publication_Information:
+            Publication_Place: Denver, Colorado
+            Publisher: U.S. Geological Survey
+          Online_Linkage: http://greenwood.cr.usgs.gov/pub/open-file-reports/ofr-01-0443/
+  Description:
+    Abstract: This cover contains the outlines of recent landslides formed prior to Hurricane Mitch in October - November 1998.  Jeffrey Coe and Robert Bucknam mapped the landslides.  Most landslides were mapped using 1:40,000-scale aerial photographs and a Kern PG-2 photogrammetric plotter at 4X and 8X magnifications.  The photographs were scaled and oriented to the topographic base map using prominent topographic landmarks and plotted on a transparent polyester overlay registered to the topographic base maps at scales of 1:50,000 or 1:25,000.  In areas where landslides were very sparse, the aerial photographs were scanned with a mirror stereoscope at 4X magnification, and landslide locations were transferred to base maps by inspection.  The mapped landslides were digitized manually or by an optical scanner, and the data were then digitally registered to a digital version of the base map in ArcInfo.
+    Purpose: The cover shows the distribution of recent landslides formed prior to Hurricane Mitch in one of twenty 1:50,000-scale maps within a large study area adjacent to the Motagua and Polochic Rivers.  When combined, the maps prov  Denominator_of_Flattening_Ratio: 294.978698
+Entity_and_Attribute_Information:
+  Detailed_Description:
+    Entity_Type:
+      Entity_Type_Label: ols21623.aat
+    Attribute:
+      Attribute_Label: FID
+      Attribute_Definition: Internal feature number.
+      Attribute_Definition_Source: ESRI
+      Attribute_Domain_Values:
+        Unrepresentable_Domain: Sequential unique whole numbers that are automatically generated.
+    Attribute:
+      Attribute_Label: Shape
+      Attribute_Definition: Feature geometry.
+      Attribute_Definition_Source: ESRI
+      Attribute_Domain_Values:
+        Unrepresentable_Domain: Coordinates defining the features.
+    Attribute:
+      Attribute_Label: FNODE#
+      Attribute_Definition: Internal node number for the beginning of an arc (from-node).
+      Attribute_Definition_Source: ESRI
+      Attribute_Domain_Values:
+        Unrepresentable_Domain: Whole numbers that are automatically generated.
+    Attribute:
+      Attribute_Label: TNODE#
+      Attribute_Definition: Internal node number for the end of an arc (to-node).
+      Attribute_Definition_Source: ESRI
+      Attribute_Domain_Values:
+        Unrepresentable_Domain: Whole numbers that are automatically generated.
+    Attribute:
+      Attribute_Label: LPOLY#
+      Attribute_Definition: Internal node number for the left polygon.
+      Attribute_Definition_Source: ESRI
+      Attribute_Domain_Values:
+        Unrepresentable_Domain: Whole numbers that are automatically generated.
+    Attribute:
+      Attribute_Label: RPOLY#
+      Attribute_Definition: Internal node number for the right polygon.
+      Attribute_Definition_Source: ESRI
+      Attribute_Domain_Values:
+        Unrepresentable_Domain: Whole numbers that are automatically generated.
+    Attribute:
+      Attribute_Label: LENGTH
+      Attribute_Definition: Length of feature in internal units.
+      Attribute_Definition_Source: ESRI
+      Attribute_Domain_Values:
+        Unrepresentable_Domain: Positive real numbers that are automatically generated.
+    Attribute:
+      Attribute_Label: OLS21623#
+      Attribute_Definition: Internal feature number.
+      Attribute_Definition_Source: ESRI
+      Attribute_Domain_Values:
+        Unrepresentable_Domain: Sequential unique whole numbers that are automatically generated.
+    Attribute:
+      Attribute_Label: OLS21623-ID
+      Attribute_Definition: User-defined feature number.
+      Attribute_Definition_Source: ESRI
+  Detailed_Description:
+    Entity_Type:
+      Entity_Type_Label: ols21623.pat
+    Attribute:
+      Attribute_Label: FID
+      Attribute_Definition: Internal feature number.
+      Attribute_Definition_Source: ESRI
+      Attribute_Domain_Values:
+        Unrepresentable_Domain: Sequential unique whole numbers that are automatically generated.
+    Attribute:
+      Attribute_Label: Shape
+      Attribute_Definition: Feature geometry.
+      Attribute_Definition_Source: ESRI
+      Attribute_Domain_Values:
+        Unrepresentable_Domain: Coordinates defining the features.
+    Attribute:
+      Attribute_Label: AREA
+      Attribute_Definition: Area of feature in internal units squared.
+      Attribute_Definition_Source: ESRI
+      Attribute_Domain_Values:
+        Unrepresentable_Domain: Positive real numbers that are automatically generated.
+    Attribute:
+      Attribute_Label: PERIMETER
+      Attribute_Definition: Perimeter of feature in internal units.
+      Attribute_Definition_Source: ESRI
+      Attribute_Domain_Values:
+        Unrepresentable_Domain: Positive real numbers that are automatically generated.
+    Attribute:
+      Attribute_Label: OLS21623#
+      Attribute_Definition: Internal feature number.
+      Attribute_Definition_Source: ESRI
+      Attribute_Domain_Values:
+        Unrepresentable_Domain: Sequential unique whole numbers that are automatically generated.
+    Attribute:
+      Attribute_Label: OLS21623-ID
+      Attribute_Definition: User-defined feature number.
+      Attribute_Definition_Source: ESRI
+  Overview_Description:
+Distribution_Information:
+  Standard_Order_Process:
+    Digital_Form:
+      Digital_Transfer_Information:
+        Transfer_Size: 0.019
+Metadata_Reference_Information:
+  Metadata_Date: 20020104
+  Metadata_Contact:
+    Contact_Information:
+      Contact_Person_Primary:
+        Contact_Person: Jonathan W. Godt
+        Contact_Organization: U.S. Geological Survey
+      Contact_Position: Geologist
+      Contact_Address:
+        Address_Type: mailing address
+        Address: USGS, MS 966
+        Address: Denver Federal Center
+        Address: Box 25046
+        City: Denver
+        State_or_Province: CO
+        Postal_Code: 80225-0046
+        Country: USA
+      Contact_Voice_Telephone: (303) 273-8626
+      Contact_Facsimile_Telephone: (303) 273-8600
+      Contact_Electronic_Mail_Address: jgodt@usgs.gov
+      Hours_of_Service: 0800 - 1630 Mountain Time M-F
+      Contact_Instructions: E-mail is preferred
+  Metadata_Standard_Name: FGDC Content Standards for Digital Geospatial Metadata
+  Metadata_Standard_Version: FGDC-STD-001-1998
+  Metadata_Time_Convention: local time
+  Metadata_Access_Constraints: None
+  Metadata_Use_Constraints: None
+  Metadata_Security_Information:
+    Metadata_Security_Classification: Unclassified
+  Metadata_Extensions:
+    Online_Linkage: http://www.esri.com/metadata/esriprof80.html
+    Profile_Name: ESRI Metadata Profile
+  Metadata_Extensions:
+    Online_Linkage: http://www.esri.com/metadata/esriprof80.html
+    Profile_Name: ESRI Metadata Profile
+  Metadata_Extensions:
+    Online_Linkage: http://www.esri.com/metadata/esriprof80.html
+    Profile_Name: ESRI Metadata Profile
