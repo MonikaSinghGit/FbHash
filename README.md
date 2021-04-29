@@ -28,3 +28,6 @@ Options:<br />
   
   - To compare two digest use following command:<br />
   fbhash -c digest1 digest2<br />
+  
+  
+  Note: Requires java runtime environment build 1.8.0 or above.
