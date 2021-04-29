@@ -1,5 +1,6 @@
 # FbHash: A New Similarity Hashing Scheme for Digital Forensics
-FbHash (frequency-based hashing) is a similarity hashing tool designed to detect similarity between two digital artifacts.  FbHash computes similarity on the scale of 0 to 100, where 0 indicates no similarity and 100 indicates the 100% similarity or an exact copy.<br />
+FbHash (frequency-based hashing) is a similarity hashing tool designed to detect similarity between two digital artifacts.  FbHash computes similarity on the scale of 0 to 100, where 0 indicates no similarity and 100 indicates the 100% similarity or an exact copy.<br /> 
+Find more detail here: https://www.sciencedirect.com/science/article/pii/S1742287619301550
 
 FbHash works in the following two steps:<br />
 		1. Similarity digest generation:  takes a digital artifact as input and generates the similarity digest or fingerprint.<br />
@@ -11,7 +12,7 @@ Options:<br />
   -d  [ --digest ]                 generate digests of all files in the directory<br />
   -o  [ --output ]                stores digest to the file<br />
   -c  [ --compare ]             compare two digest files<br />
-  -t  [ --threshold ]             show results >= threshold (only works with compare option)<br />
+  -t  [ --threshold ]            show results >= threshold (only works with compare option)<br />
   -v  [ --version ]                  print the version information<br />
   -h  [ --help ]                      print help instructions<br />
   
