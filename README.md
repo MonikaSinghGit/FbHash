@@ -18,11 +18,11 @@ Options:<br />
   
   
   Instructions:<br />
-  - to generate digest of a file use following command:<br />
+  - To generate digest of a file use following command:<br />
   fbhash -fd "SourcefileName" -o "outputFileName"<br />
   example: fbhash -fd Test-Data\RandomFragment\Text\000504.text -o digest1.text<br />
     
-  - to generate digest of all the file in a folder use following command:<br />
+  - To generate digest of all the file in a folder use following command:<br />
   fbhash -d "SourcefolderName" -o "outputFileName"<br />
   example: fbhash -d Test-Data\RandomFragment\Text -o digest1.text<br />
   
